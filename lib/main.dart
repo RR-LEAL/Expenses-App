@@ -1,3 +1,4 @@
+import 'package:expenses_app/components/transaction_user.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,8 +18,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Despesas Pessoais')),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Container(
+          SizedBox(
             width: double.infinity,
             child: Card(
               elevation: 5,
@@ -26,7 +28,7 @@ class MyHomePage extends StatelessWidget {
               child: Text('Grafico'),
             ),
           ),
-          Card(child: Text('Lista de Transações')),
+          TransactionUser(),
         ],
       ),
     );
