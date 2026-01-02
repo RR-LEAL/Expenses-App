@@ -3,14 +3,14 @@ class Transaction {
   final String title;
   final double amount;
   final DateTime date;
-  final String description;
+  final String? description;
 
   Transaction({
     required this.id,
     required this.title,
     required this.amount,
     required this.date,
-    required this.description,
+    this.description,
   });
 
   Map<String, dynamic> toJson() {
